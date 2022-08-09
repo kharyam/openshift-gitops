@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: vcs-infra
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/kharyam/openshift-gitops.git
+      revision: main
+      files:
+      - path: "**/argocd-config.yaml"
+  template:
+    metadata:
+      name: '{{name}}'
+    spec:
+      project: default
+      source:
+        repoURL:  https://github.com/kharyam/openshift-gitops.git
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        server: '{{server}}'
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: false

@@ -1,0 +1,4 @@
+name: knative
+path: operators/knative
+#namespace: argocd
+server: https://kubernetes.default.svc

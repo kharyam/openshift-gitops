@@ -1,0 +1,4 @@
+name: servicemesh
+path: operators/servicemesh
+namespace: argocd
+server: https://kubernetes.default.svc
