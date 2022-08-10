@@ -6,10 +6,10 @@ metadata:
   labels:
     app: loki
 spec:
-  securityContext:
-    runAsGroup: 0
-    runAsUser: 1000
-    fsGroup: 1000
+  # securityContext:
+  #   runAsGroup: 0
+  #   runAsUser: 1000
+  #   fsGroup: 1000
   volumes:
     - name: loki-store
       persistentVolumeClaim:
