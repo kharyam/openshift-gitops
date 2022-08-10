@@ -5,4 +5,5 @@ commonLabels:
   app.kubernetes.io/name: openshift-gitops
 resources:
 - argocd-subscription.yaml
+- argocd-namespace.yaml
 - ApplicationSet.yaml
