@@ -6,6 +6,8 @@ commonLabels:
   app.kubernetes.io/component: netobserv
   argocd.argoproj.io/managed-by: openshift-gitops  
 resources:
-  - netobserv-namespace.yaml
-  - netobserv-subscription.yaml
-  - netobserv-flowcollector.yaml
+  - loki-namespace.yaml
+  - loki-cmap.yaml
+  - loki-pod.yaml
+  - loki-service.yaml
+  - loki-storage.yaml

@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: loki
+  namespace: loki
+spec:
+  selector:
+    app: loki
+  ports:
+    - port: 3100
+      protocol: TCP
