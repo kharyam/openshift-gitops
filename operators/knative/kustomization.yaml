@@ -8,3 +8,4 @@ commonLabels:
 resources:
   - knative-namespace.yaml
   - knative-subscription.yaml
+  - knative-operator-group.yaml
