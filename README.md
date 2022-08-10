@@ -2,11 +2,10 @@
 
 A GitOps repo used to initialize various tools within an OpenShift cluster via argocd.
 
-After [installing the GitOps operator](https://docs.openshift.com/container-platform/latest/cicd/gitops/installing-openshift-gitops.html):
+Run the following command to create a default ArgoCD instance and initiate the installation of all operators in this repository
 
 ```bash
-cd main
-oc apply -k .
+oc apply -k main
 ```
 ## Operators
 

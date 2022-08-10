@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/kharyam/openshift-gitops.git
       revision: main
       files:
-      - path: "**/argocd-config.yaml"
+      - path: "**/gitops-config.yaml"
   template:
     metadata:
       name: '{{name}}'
