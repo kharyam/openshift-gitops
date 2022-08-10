@@ -1,4 +1,4 @@
 name: camelk
 path: operators/camelk
-namespace: argocd
+namespace: openshift-gitops
 server: https://kubernetes.default.svc

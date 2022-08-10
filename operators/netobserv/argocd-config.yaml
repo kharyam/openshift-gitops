@@ -1,4 +1,4 @@
 name: netobserv
 path: operators/netobserv
-namespace: argocd
+namespace: openshift-gitops
 server: https://kubernetes.default.svc

@@ -1,4 +1,4 @@
 name: servicemesh
 path: operators/servicemesh
-namespace: argocd
+namespace: openshift-gitops
 server: https://kubernetes.default.svc
