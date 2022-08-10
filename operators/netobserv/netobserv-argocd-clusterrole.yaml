@@ -1,11 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: openshift-gitops-openshift-gitops-argocd-application-controller
+  name: netobserv-cluster-role
 rules:
-- apiGroups:
-  - flows.netobserv.io
-  resources:
-  - '*'
-  verbs:
-  - '*'
+- apiGroups: ["flows.netobserv.io"]
+  resources: ["*"]
+  verbs: ["*"]
