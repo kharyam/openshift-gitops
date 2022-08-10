@@ -4,4 +4,5 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/name: openshift-gitops
 resources:
+- argocd-subscription.yaml
 - ApplicationSet.yaml
