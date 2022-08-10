@@ -1,4 +1,4 @@
 name: camelk
 path: operators/camelk
-#namespace: argocd
+namespace: argocd
 server: https://kubernetes.default.svc

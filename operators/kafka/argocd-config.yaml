@@ -1,4 +1,4 @@
 name: kafka
 path: operators/kafka
-#namespace: argocd
+namespace: argocd
 server: https://kubernetes.default.svc

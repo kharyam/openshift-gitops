@@ -1,4 +1,4 @@
-name: camelk
-path: operators/camelk
-#namespace: argocd
+name: netobserv
+path: operators/netobserv
+namespace: argocd
 server: https://kubernetes.default.svc
