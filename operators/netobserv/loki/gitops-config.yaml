@@ -1,4 +1,4 @@
-name: netobserv-loki
+name: NetObserv-Loki
 path: operators/netobserv/loki
 namespace: openshift-gitops
 server: https://kubernetes.default.svc

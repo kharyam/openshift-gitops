@@ -1,28 +1,37 @@
 # OpenShift GitOps
 
-A GitOps repo used to initialize various tools within an OpenShift cluster via argocd.
+A GitOps repo used to initialize various tools within an OpenShift cluster via ArgoCD.
 
 Run the following command to create a default ArgoCD instance and initiate the installation of all operators in this repository
 
 ```bash
 oc apply -k main
 ```
+
 ## Operators
 
-The following operators are installed by this repository
+The following sub-sections describe the operators installed by this repository.
 
 ### camelk
 
 ### kafka
 
+Also creates a `KafkaCluster` in the `kafka` namespace.
+
 If running with FIPS enabled, [patch the deployment to disable FIPS mode](https://access.redhat.com/documentation/en-us/red_hat_amq_streams/2.1/html/release_notes_for_amq_streams_2.1_on_openshift/enhancements-str), e.g.,
 ```bash
-oc set env deployment/amq-streams-cluster-operator-v2.1.0-6 -n openshift-operators FIPS_MODE=disable
+oc set env deployment/amq-streams-cluster-operator-v2.1.0-6 -n openshift-operators \
+   FIPS_MODE=disable
 ```
+
 
 ### knative
 
+Also creates `KnativeEventing`, `KnativeServing`, and `KnativeKafka` instances in the correct namespaces. The `KnativeKafka` instance references the `KafkaCluster` that is created in the `kafka` namespace.
+
 ### netobserv
+
+A non-production Loki instance and `FlowControl` object will also be created. NetObserv will be available in the admin console.
 
 ### servicemesh
 
@@ -32,13 +41,19 @@ This repository also installs the operators required by service mesh:
 * kiali
 * elasticsearch
 
-If the servicemesh operator is deleted (e.g., by removing the ApplicationSet), run the following script to perform additional cleanup:
-```bash
-scripts/servicemeshcleanup.sh
-```
+## Deletion
 
-
-# TODOs
-
-* Install the gitops operator?
-* 
+1. Delete the application set:
+    ```bash
+    oc delete appset openshift-gitops -n openshift-gitops
+    ```
+2. Delete any remaining applications: (Necessary?)
+    ```bash
+    oc delete application --all -n openshift-gitops
+    ```
+    Edit any remaining applications and remove their finalizers
+3. Manually delete all the remaining operators in the admin web console
+4. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
+    ```bash
+    scripts/servicemeshcleanup.sh
+    ```
