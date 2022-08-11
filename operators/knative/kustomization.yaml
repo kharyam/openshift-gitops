@@ -12,3 +12,5 @@ resources:
   - knative-eventing.yaml
   - knative-serving.yaml
   - knative-kafka.yaml
+  - knative-argocd-clusterrole-binding.yaml
+  - knative-argocd-clusterrole.yaml
