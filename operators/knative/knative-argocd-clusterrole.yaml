@@ -6,4 +6,6 @@ rules:
 - apiGroups: ["operator.knative.dev"]
   resources: ["*"]
   verbs: ["*"]
-
+- apiGroups: ["operator.serverless.openshift.io"]
+  resources: ["*"]
+  verbs: ["*"]
