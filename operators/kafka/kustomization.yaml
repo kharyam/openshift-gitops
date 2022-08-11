@@ -7,3 +7,5 @@ commonLabels:
   argocd.argoproj.io/managed-by: openshift-gitops  
 resources:
   - kafka-subscription.yaml
+  - kafka-namespace.yaml
+  - kafka-cluster.yaml

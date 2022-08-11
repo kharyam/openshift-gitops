@@ -9,3 +9,6 @@ resources:
   - knative-namespace.yaml
   - knative-subscription.yaml
   - knative-operator-group.yaml
+  - knative-eventing,yaml
+  - knative-serving.yaml
+  - knative-kafka.yaml
