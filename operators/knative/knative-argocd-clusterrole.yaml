@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: knative-cluster-role
+  name: knative-gitops-cluster-role
 rules:
 - apiGroups: ["operator.knative.dev"]
   resources: ["*"]
