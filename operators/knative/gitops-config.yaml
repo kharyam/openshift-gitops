@@ -1,4 +1,4 @@
-name: knative
+name: operator-knative
 path: operators/knative
 namespace: openshift-gitops
 server: https://kubernetes.default.svc
