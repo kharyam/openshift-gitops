@@ -8,3 +8,5 @@ commonLabels:
 resources:
   - smcp-namespace.yaml
   - smcp.yaml
+  - servicemesh-demo-namespace.yaml
+  - smmr.yaml
