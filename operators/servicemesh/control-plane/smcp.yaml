@@ -16,7 +16,16 @@ spec:
     sampling: 10000
   gateways:
     openshiftRoute:
-      enabled: true
+      enabled: true  
+    ingress:
+      runtime:
+        deployment:
+          autoScaling:
+            enabled: true
+            maxReplicas: 3
+            minReplicas: 1
+            targetCPUUtilizationPercentage: 80
+          replicas: 1
   policy:
     type: Istiod
   addons:
