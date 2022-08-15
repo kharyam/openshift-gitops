@@ -7,4 +7,4 @@ commonLabels:
   argocd.argoproj.io/managed-by: openshift-gitops  
 resources:
   - smcp-namespace.yaml
-  - smcp
+  - smcp.yaml
