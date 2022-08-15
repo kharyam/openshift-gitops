@@ -11,3 +11,11 @@ spec:
   name: red-hat-camel-k
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  config:
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "500m"
+      limits:
+        memory: "3Gi"
+        cpu: "4"
