@@ -1,0 +1,4 @@
+name: knative-instance
+path: operators/knative/instance
+namespace: openshift-gitops
+server: https://kubernetes.default.svc
