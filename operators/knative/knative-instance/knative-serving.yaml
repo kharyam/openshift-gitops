@@ -4,9 +4,5 @@ metadata:
   name: knative-serving
   namespace: knative-serving
 spec:
-  cluster-local-gateway: {}
-  controller-custom-certs:
-    name: ''
-    type: ''
-  knative-ingress-gateway: {}
-  registry: {}
+  high-availability:
+    replicas: 1
