@@ -14,3 +14,5 @@ resources:
   - jaeger-product.yaml
   - kiali-ossm.yaml
   - servicemeshoperator.yaml
+  - servicemesh-clusterrole.yaml
+  - servicemesh-clusterrole-binding.yaml
