@@ -49,8 +49,9 @@ This repository also installs the operators required by service mesh:
     ```bash
     oc delete appset openshift-gitops -n openshift-gitops
     ```
-2. Manually delete all the remaining operators (cluster service versions) in the admin web console
-3. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
+2. Delete the `knative-eventing`, `knative-serving`, `knative-serving-ingress` namespaces. May require deleting the *KnativeEventing* object from the `knative-eventing` namespace and the *KnativeServing* object from the `knative-serving` namespaces
+3. Manually delete all the remaining operators (cluster service versions) in the admin web console
+4. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
     ```bash
     scripts/servicemeshcleanup.sh
     ```
