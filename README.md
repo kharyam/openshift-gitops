@@ -2,9 +2,11 @@
 
 A GitOps repo used to initialize various tools within an OpenShift cluster via ArgoCD.
 
-Run the following command to create a default ArgoCD instance and initiate the installation of all operators in this repository
+Run the following commands to create a default ArgoCD instance and initiate the installation of all operators in this repository
 
 ```bash
+oc apply -k argocd
+# Wait for argo to be available
 oc apply -k main
 ```
 
@@ -47,13 +49,8 @@ This repository also installs the operators required by service mesh:
     ```bash
     oc delete appset openshift-gitops -n openshift-gitops
     ```
-2. Delete any remaining applications: (Necessary?)
-    ```bash
-    oc delete application --all -n openshift-gitops
-    ```
-    Edit any remaining applications and remove their finalizers
-3. Manually delete all the remaining operators in the admin web console
-4. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
+2. Manually delete all the remaining operators (cluster service versions) in the admin web console
+3. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
     ```bash
     scripts/servicemeshcleanup.sh
     ```

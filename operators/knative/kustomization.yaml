@@ -9,8 +9,5 @@ resources:
   - knative-namespace.yaml
   - knative-subscription.yaml
   - knative-operator-group.yaml
-  - knative-eventing.yaml
-  - knative-serving.yaml
-  - knative-kafka.yaml
   - knative-argocd-clusterrole-binding.yaml
   - knative-argocd-clusterrole.yaml
