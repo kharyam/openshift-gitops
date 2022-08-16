@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: kafka-gitops-cluster-role
 rules:
-- apiGroups: ["strimzi.io"]
+- apiGroups: ["kafka.strimzi.io"]
   resources: ["*"]
   verbs: ["*"]
