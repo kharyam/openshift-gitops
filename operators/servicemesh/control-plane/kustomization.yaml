@@ -12,3 +12,4 @@ resources:
   - smmr.yaml
   - gallery0-namespace.yaml
   - gallery1-namespace.yaml
+  - gallery2-namespace.yaml
