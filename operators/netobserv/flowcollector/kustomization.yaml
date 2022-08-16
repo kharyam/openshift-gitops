@@ -6,7 +6,4 @@ commonLabels:
   app.kubernetes.io/component: netobserv
   argocd.argoproj.io/managed-by: openshift-gitops  
 resources:
-  - netobserv-argocd-clusterrole.yaml
-  - netobserv-argocd-clusterrolebinding.yaml
-  - netobserv-namespace.yaml
-  - netobserv-subscription.yaml
+  - netobserv-flowcollector.yaml

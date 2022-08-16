@@ -1,0 +1,4 @@
+name: netobserv-flowcollector
+path: operators/netobserv/flowcollector
+namespace: openshift-gitops
+server: https://kubernetes.default.svc
