@@ -10,3 +10,5 @@ resources:
   - smcp.yaml
   - servicemesh-demo-namespace.yaml
   - smmr.yaml
+  - gallery0-namespace.yaml
+  - gallery1-namespace.yaml
