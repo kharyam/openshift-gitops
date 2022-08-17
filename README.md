@@ -22,11 +22,7 @@ Also creates a `KafkaCluster` in the `kafka` namespace.
 
 ---
 **NOTE**
-If running with FIPS enabled, [patch the deployment to disable FIPS mode](https://access.redhat.com/documentation/en-us/red_hat_amq_streams/2.1/html/release_notes_for_amq_streams_2.1_on_openshift/enhancements-str), e.g.,
-```bash
-oc set env deployment/amq-streams-cluster-operator-v2.1.0-6 -n openshift-operators \
-   FIPS_MODE=disabled
-```
+[The subscription](operators/kafka/kafka-subscription.yaml) sets the environment variable `FIPS_MODE` to `disabled` to allow the operator to work properly in a FIPS enabled OpenShift installation.
 ---
 
 ### knative
@@ -57,8 +53,13 @@ This repository also installs the operators required by service mesh:
    ```
 3. Manually delete all the remaining operators (cluster service versions) in the admin web console or by cli:
    ```bash
+   # Delete individual CSVs
    oc get csv -n opesnhift-operators
    oc delete csv <NAME_HERE> -n openshift-operators
+
+   # OR Delete all CSVs except GitOps...
+   # oc get csv -n openshift-operators | grep -v gitops | grep -v NAME | xargs oc delete csv -n openshift-operators
+
    ```
 4. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:
     ```bash

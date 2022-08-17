@@ -13,6 +13,6 @@ resources:
   - elasticsearch-subscription.yaml
   - jaeger-subscription.yaml
   - kiali-subscription.yaml
-  - servicemsh-subscription.yaml
+  - servicemesh-subscription.yaml
   - servicemesh-clusterrole.yaml
   - servicemesh-clusterrole-binding.yaml
