@@ -1,0 +1,4 @@
+name: pipelines
+path: operators/pipelines
+namespace: openshift-gitops
+server: https://kubernetes.default.svc

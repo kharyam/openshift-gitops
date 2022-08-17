@@ -10,9 +10,9 @@ resources:
   - openshift-distributed-tracing-namespace.yaml
   - openshift-distributed-tracing-operator-group.yaml
   - openshift-operators-redhat-operator-group.yaml
-  - elasticsearch-operator.yaml
-  - jaeger-product.yaml
-  - kiali-ossm.yaml
-  - servicemeshoperator.yaml
+  - elasticsearch-subscription.yaml
+  - jaeger-subscription.yaml
+  - kiali-subscription.yaml
+  - servicemsh-subscription.yaml
   - servicemesh-clusterrole.yaml
   - servicemesh-clusterrole-binding.yaml
