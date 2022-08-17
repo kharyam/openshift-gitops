@@ -2,3 +2,5 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: gallery1
+  labels:
+    kiali.io/member-of: smcp
