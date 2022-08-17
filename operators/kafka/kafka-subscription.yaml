@@ -8,6 +8,10 @@ metadata:
 spec:
   channel: stable
   installPlanApproval: Automatic
-  name: amq-streams
+  name: amq-streamsamq-streams-cluster-operator-v2.1.0-6-7f4999fb7c-qzk9k
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+  config:
+    env:
+    - name: FIPS_MODE
+      value: disable
