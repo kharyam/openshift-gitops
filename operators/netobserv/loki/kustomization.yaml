@@ -8,6 +8,6 @@ commonLabels:
 resources:
   - loki-namespace.yaml
   - loki-cmap.yaml
-  - loki-pod.yaml
+  - loki-deployment.yaml
   - loki-service.yaml
   - loki-storage.yaml
