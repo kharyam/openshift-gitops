@@ -6,6 +6,6 @@ metadata:
 spec:
   members:
     - servicemesh-demo
-    - gallery0
-    - gallery1
-    - gallery2    
+    - project0
+    - project1
+    - project2    
