@@ -45,7 +45,7 @@ spec:
           failureThreshold: 3
         resources:
           limits:
-            cpu: 500m
+            cpu: 1
             memory: 500Mi
       volumes:
         - name: loki-store
