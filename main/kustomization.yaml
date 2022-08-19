@@ -4,4 +4,6 @@ kind: Kustomization
 commonLabels:
   app.kubernetes.io/name: openshift-gitops
 resources:
-- ApplicationSet.yaml
+- OperatorsAppProject.yaml
+- OperatorsAppSet.yaml
+- OperatorInstancesAppSet.yaml

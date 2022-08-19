@@ -58,7 +58,7 @@ This repository also installs the operators required by service mesh:
    oc delete csv <NAME_HERE> -n openshift-operators
 
    # OR Delete all CSVs except GitOps...
-   # oc get csv -n openshift-operators | grep -v gitops | grep -v NAME | xargs oc delete csv -n openshift-operators
+   # oc get csv -n openshift-operators --no-headers | grep -v gitops | awk '{print $1}' | xargs oc delete csv -n openshift-operators
 
    ```
 4. Run the [service mesh cleanup](https://docs.openshift.com/container-platform/latest/service_mesh/v2x/removing-ossm.html#ossm-remove-cleanup_removing-ossm) script:

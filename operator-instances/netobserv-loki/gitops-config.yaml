@@ -1,4 +1,4 @@
-name: knative-instance
-path: operators/knative/instance
+name: netobserv-loki
+path: operator-instances/netobserv-loki
 namespace: openshift-gitops
 server: https://kubernetes.default.svc

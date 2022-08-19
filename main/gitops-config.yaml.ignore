@@ -2,3 +2,4 @@ name: gitops
 path: main
 namespace: openshift-gitops
 server: https://kubernetes.default.svc
+project: operators

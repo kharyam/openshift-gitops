@@ -1,4 +1,4 @@
-name: netobserv-loki
-path: operators/netobserv/loki
+name: kafka-cluster
+path: operator-instances/kafka-cluster
 namespace: openshift-gitops
 server: https://kubernetes.default.svc
