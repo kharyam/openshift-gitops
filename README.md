@@ -2,7 +2,7 @@
 
 A GitOps repo used to initialize various tools within an OpenShift cluster via ArgoCD.
 
-Run the following commands to create a default ArgoCD instance and initiate the installation of all operators in this repository
+Run the following commands to create a default ArgoCD instance and initiate the installation of all operators in this repository:
 
 ```bash
 oc apply -k argocd
