@@ -93,3 +93,6 @@ data:
       max_query_lookback: 0
       min_sharding_lookback: 0s
       split_queries_by_interval: 1m
+    table_manager:
+      retention_deletes_enabled: true
+      retention_period: 1h

@@ -29,6 +29,22 @@ spec:
             name: loki-store
           - mountPath: "/etc/loki"
             name: loki-config        
+        livenessProbe:
+          httpGet:
+            path: /ready
+            port: 3100
+          initialDelaySeconds: 3
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 3100
+          initialDelaySeconds: 3
+          periodSeconds: 10
+        resources:
+          limits:
+            cpu: 500m
+            memory: 500mi
       volumes:
         - name: loki-store
           persistentVolumeClaim:
