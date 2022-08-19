@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/kharyam/openshift-gitops.git
       revision: main
       files:
-      - path: "/operator-instances/**/gitops-config.yaml"
+      - path: "operator-instances/**/gitops-config.yaml"
   template:
     metadata:
       name: '{{name}}'
