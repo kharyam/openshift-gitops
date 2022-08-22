@@ -34,19 +34,19 @@ spec:
             path: /ready
             port: 3100
           initialDelaySeconds: 20
-          periodSeconds: 10
+          periodSeconds: 15
           failureThreshold: 4
         readinessProbe:
           httpGet:
             path: /ready
             port: 3100
           initialDelaySeconds: 10
-          periodSeconds: 10
+          periodSeconds: 15
           failureThreshold: 3
-        resources:
-          limits:
-            cpu: 1
-            memory: 500Mi
+#        resources:
+#          limits:
+#            cpu: 500m
+#            memory: 2Gi
       volumes:
         - name: loki-store
           persistentVolumeClaim:
