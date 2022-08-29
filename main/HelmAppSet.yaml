@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/kharyam/openshift-gitops.git
-      revision: {{revision}}
+      revision: main
       files:
       - path: "helm/**/gitops-config.yaml"
   template:
@@ -16,11 +16,9 @@ spec:
     spec:
       project: 'default'
       source:
-        repoURL:  https://github.com/kharyam/openshift-gitops.git
+        repoURL: https://github.com/kharyam/openshift-gitops.git
         targetRevision: main
-        chart: '{{path}}'
-        helm:
-          releaseName: kubecost
+        path: '{{path}}'
       destination:
         server: '{{server}}'
         namespace: '{{namespace}}'
