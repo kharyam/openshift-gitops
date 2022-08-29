@@ -10,6 +10,15 @@ oc apply -k argocd
 oc apply -k main
 ```
 
+Optional - The default synchronization period is 3 minutes.  Set it to a lower value for demo purposes:
+```bash
+# Set the sync period to 10 seconds
+oc patch argocd/openshift-gitops -n openshift-gitops -p '{"spec":{"controller":{"appSync":"10s"}}}' --type=merge
+
+# Restart the repo server
+oc scale deployment/openshift-gitops-repo-server -n openshift-gitops --replicas=0
+```
+
 ## Operators
 
 The following sub-sections describe the operators installed by this repository.
