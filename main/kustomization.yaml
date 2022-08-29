@@ -7,3 +7,4 @@ resources:
 - OperatorsAppProject.yaml
 - OperatorsAppSet.yaml
 - OperatorInstancesAppSet.yaml
+- HelmAppSet.yaml

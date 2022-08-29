@@ -1,0 +1,4 @@
+name: kubecost
+path: helm/kubecost/cost-analyzer
+namespace: kubecost
+server: https://kubernetes.default.svc

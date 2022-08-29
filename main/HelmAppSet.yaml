@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+   name: helm-apps
+   namespace: openshift-gitops
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/kharyam/openshift-gitops.git
+      revision: main
+      files:
+      - path: "helm/**/gitops-config.yaml"
+  template:
+    metadata:
+      name: '{{name}}'
+    spec:
+      project: 'default'
+      source:
+        repoURL:  https://github.com/kharyam/openshift-gitops.git
+        targetRevision: main
+        chart: '{{path}}'
+        helm:
+          releaseName: kubecost
+      destination:
+        server: '{{server}}'
+        namespace: '{{namespace}}'
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: false
