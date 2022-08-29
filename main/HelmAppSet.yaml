@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/kharyam/openshift-gitops.git
-      revision: main
+      revision: {{revision}}
       files:
       - path: "helm/**/gitops-config.yaml"
   template:
