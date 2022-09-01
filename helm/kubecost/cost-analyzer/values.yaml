@@ -706,7 +706,6 @@ awsstore:
   useAwsStore: false
   createServiceAccount: false
 
-openshift: true
 # readonly: false # disable updates to kubecost from the frontend UI and via POST request
 
 # These configs can also be set from the Settings page in the Kubecost product UI
