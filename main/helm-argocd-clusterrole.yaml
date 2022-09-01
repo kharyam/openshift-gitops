@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: helm-gitops-cluster-role
+rules:
+- apiGroups: ["*"]
+  resources: ["secrets","services","serviceaccounts","daemonsets","replicasets","statefulsets","deployments","podsecuritypolicies"]
+  verbs: ["*"]
