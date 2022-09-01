@@ -42,6 +42,7 @@ spec:
 {{- end }}
 {{- end }}
     spec:
+      {{- if (not .Values.openshift) }}
       {{- if .Values.kubecostFrontend.tls }}
       {{- if .Values.kubecostFrontend.tls.enabled }}
       securityContext:
@@ -60,6 +61,7 @@ spec:
         runAsUser: 1001
         runAsGroup: 1001
         fsGroup: 1001
+      {{- end }}
       {{- end }}
       restartPolicy: Always
       serviceAccountName: {{ template "cost-analyzer.serviceAccountName" . }}
