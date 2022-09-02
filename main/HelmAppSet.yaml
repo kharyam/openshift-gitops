@@ -20,7 +20,7 @@ spec:
         targetRevision: main
         path: '{{path}}'
         helm:
-          valueFiles: '{{valueFiles}}'
+          valueFiles: ["openshift-values.yaml"]
       destination:
         server: '{{server}}'
         namespace: '{{namespace}}'

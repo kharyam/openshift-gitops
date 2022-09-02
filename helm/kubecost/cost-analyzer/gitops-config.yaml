@@ -3,5 +3,4 @@ path: helm/kubecost/cost-analyzer
 namespace: kubecost
 server: https://kubernetes.default.svc
 revision: 1.96.0
-valueFiles:
-  - values-openshift.yaml 
+valueFiles: ["values-openshift.yaml"]
