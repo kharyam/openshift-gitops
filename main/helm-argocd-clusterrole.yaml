@@ -4,5 +4,5 @@ metadata:
   name: helm-gitops-cluster-role
 rules:
 - apiGroups: ["*"]
-  resources: ["secrets","services","serviceaccounts","daemonsets","replicasets","statefulsets","deployments","podsecuritypolicies"]
+  resources: ["secrets","services","serviceaccounts","daemonsets","replicasets","statefulsets","deployments","podsecuritypolicies","routes"]
   verbs: ["*"]
