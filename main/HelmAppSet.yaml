@@ -19,6 +19,8 @@ spec:
         repoURL: https://github.com/kharyam/openshift-gitops.git
         targetRevision: main
         path: '{{path}}'
+        helm:
+          valueFiles: '{{valueFiles}}'
       destination:
         server: '{{server}}'
         namespace: '{{namespace}}'
