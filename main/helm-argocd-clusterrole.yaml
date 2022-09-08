@@ -6,3 +6,6 @@ rules:
 - apiGroups: ["*"]
   resources: ["secrets","services","serviceaccounts","daemonsets","replicasets","statefulsets","deployments","podsecuritypolicies","routes"]
   verbs: ["*"]
+- apiGroups: ["apiextensions.k8s.io"]
+  resources: ["customresourcedefinitions"]
+  verbs: ["*"]

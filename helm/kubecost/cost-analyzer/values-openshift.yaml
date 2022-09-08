@@ -19,6 +19,9 @@ networkCosts:
 global:
   grafana:
     # TODO In OCP grafana pod fails to start becuase it requires anyuid
+    # Enable via:
+    #   oc label  --overwrite ns kubecost  pod-security.kubernetes.io/enforce=privileged
+    #   oc adm policy add-scc-to-user anyuid -z kubecost-grafana -n kubecost
     enabled: true
     proxy: true
 
@@ -36,5 +39,8 @@ persistentVolume:
 
 # Enable recommendations to be executed
 # TODO: In OCP the controller fails because it needs anyuid
+# Enable via:
+#   oc label  --overwrite ns kubecost  pod-security.kubernetes.io/enforce=privileged
+#   oc adm policy add-scc-to-user privileged -z kubecost-cluster-controller -n kubecost
 clusterController:
   enabled: true
