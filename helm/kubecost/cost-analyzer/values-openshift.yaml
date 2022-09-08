@@ -19,8 +19,8 @@ networkCosts:
 global:
   grafana:
     # TODO In OCP grafana pod fails to start becuase it requires anyuid
-    enabled: false
-    proxy: false
+    enabled: true
+    proxy: true
 
 kubecostFrontend:
   fullImageName: "linhlamkc/cost-analyzer-frontend:prod-1.96.0"
@@ -37,4 +37,4 @@ persistentVolume:
 # Enable recommendations to be executed
 # TODO: In OCP the controller fails because it needs anyuid
 clusterController:
-  enabled: false
+  enabled: true
