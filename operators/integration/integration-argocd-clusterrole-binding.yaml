@@ -5,7 +5,7 @@ metadata:
 roleRef:
   apiGroup: integration.redhat.com
   kind: ClusterRole
-  name: knative-gitops-cluster-role
+  name: integration-gitops-cluster-role
 subjects:
 - kind: ServiceAccount
   name: openshift-gitops-argocd-application-controller
