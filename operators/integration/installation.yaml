@@ -42,4 +42,3 @@ spec:
   service-registry-installation:
     enabled: false
     mode: cluster
-~
