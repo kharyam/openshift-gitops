@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: integration-gitops-cluster-role
 rules:
-- apiGroups: ["integration.redhat.com"]
+- apiGroups: ["installations.integration.redhat.com"]
   resources: ["*"]
   verbs: ["*"]
