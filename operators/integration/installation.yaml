@@ -1,4 +1,4 @@
-nd: Installation
+kind: Installation
 apiVersion: integration.redhat.com/v1
 metadata:
   name: rhi-installation
