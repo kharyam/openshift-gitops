@@ -3,7 +3,7 @@ kind: ClusterRoleBinding
 metadata:
   name: integration-gitops-binding
 roleRef:
-  apiGroup: integration.redhat.com
+  apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: integration-gitops-cluster-role
 subjects:
