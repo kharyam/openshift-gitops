@@ -8,3 +8,5 @@ commonLabels:
 resources:
   - integration-subscription.yaml
   - installation.yaml
+  - integration-argocd-clusterrole.yaml
+  - integration-argocd-clusterrole-binding.yaml
