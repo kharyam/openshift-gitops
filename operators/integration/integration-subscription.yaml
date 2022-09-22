@@ -1,4 +1,4 @@
-apiVersion: operators.coreos.com/v1alpha1                                                                                                                         [60/1638]
+apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
   name: integration-operator
