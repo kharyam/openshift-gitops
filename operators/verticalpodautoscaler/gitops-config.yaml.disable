@@ -1,4 +1,0 @@
-name: operator-verticalpodautoscaler
-path: operators/verticalpodautoscaler
-namespace: openshift-gitops
-server: https://kubernetes.default.svc
