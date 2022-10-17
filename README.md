@@ -10,6 +10,7 @@ oc apply -k argocd
 oc apply -k main
 ```
 
+TODO: This doesn't seem to work
 Optional - The default synchronization period is 3 minutes.  Set it to a lower value for demo purposes:
 ```bash
 # Set the sync period to 10 seconds
@@ -49,6 +50,15 @@ This repository also installs the operators required by service mesh:
 * jaeger
 * kiali
 * elasticsearch
+
+### kubecost
+
+Need to apply a label to the namespace to allow grafana and the controller to run privileged:
+```bash
+oc label  --overwrite ns kubecost  pod-security.kubernetes.io/enforce=privileged
+oc adm policy add-scc-to-user anyuid -z kubecost-cluster-controller -n kubecost
+oc adm policy add-scc-to-user anyuid -z kubecost-grafana -n kubecost
+```
 
 ## Deletion
 
