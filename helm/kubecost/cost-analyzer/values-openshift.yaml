@@ -42,5 +42,5 @@ persistentVolume:
 # Enable via:
 #   oc label  --overwrite ns kubecost  pod-security.kubernetes.io/enforce=privileged
 #   oc adm policy add-scc-to-user privileged -z kubecost-cluster-controller -n kubecost
-clusterController:
-  enabled: true
+#clusterController:
+#  enabled: true
