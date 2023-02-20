@@ -6,7 +6,7 @@ metadata:
   name: netobserv-operator
   namespace: openshift-operators
 spec:
-  channel: alpha
+  channel: v1.0.x
   installPlanApproval: Automatic
   name: netobserv-operator
   source: community-operators
