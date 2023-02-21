@@ -1,4 +1,0 @@
-name: servicemesh-controlplane
-path: operator-instances/servicemesh-control-plane
-namespace: smcp
-server: https://kubernetes.default.svc

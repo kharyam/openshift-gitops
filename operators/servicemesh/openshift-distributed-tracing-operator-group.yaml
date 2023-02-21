@@ -1,6 +1,0 @@
-kind: OperatorGroup
-apiVersion: operators.coreos.com/v1
-metadata:
-  name: og-jaeger
-  namespace: openshift-distributed-tracing
-spec: {}

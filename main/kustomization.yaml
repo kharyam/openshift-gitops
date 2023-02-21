@@ -7,6 +7,3 @@ resources:
 - OperatorsAppProject.yaml
 - OperatorsAppSet.yaml
 - OperatorInstancesAppSet.yaml
-- helm-argocd-clusterrole.yaml
-- helm-argocd-clusterrolebinding.yaml
-- HelmAppSet.yaml
