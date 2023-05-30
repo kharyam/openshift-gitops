@@ -6,8 +6,8 @@ metadata:
   name: netobserv-operator
   namespace: openshift-operators
 spec:
-  channel: alpha
+  channel: stable
   installPlanApproval: Automatic
   name: netobserv-operator
-  source: community-operators
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
